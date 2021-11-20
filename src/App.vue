@@ -30,7 +30,7 @@
       </v-navigation-drawer>
 
       <!-- V-CONTENT BELOW  -->
-      
+
       <v-container fill-height>
         <v-card-text>
           <center>
@@ -38,9 +38,15 @@
           </center>
         </v-card-text>
       </v-container>
-
     </v-card>
 
+    <!-- V-FOOTER BELOW  -->
+
+    <v-footer height="30px" padless>
+      <v-row class="text-center" justify="center">
+        <strong> v-footer </strong>
+      </v-row>
+    </v-footer>
     
   </v-app>
 
