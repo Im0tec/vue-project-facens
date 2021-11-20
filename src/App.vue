@@ -31,7 +31,7 @@
 
       <!-- V-CONTENT BELOW  -->
 
-      <v-container fill-height right: "1px">
+      <v-container fill-height>
         <v-card-text>
           <center>
             <strong> v-content </strong>
