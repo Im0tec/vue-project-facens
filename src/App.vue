@@ -16,9 +16,9 @@
       </v-row>
     </v-app-bar>
 
-    <!-- V-NAVIGATION-DRAWER BELOW  -->
+    <!-- V-NAVIGATION-DRAWER AND V-CONTENT BELOW  -->
 
-    <v-card height="81vh">
+    <v-card height="88vh">
       <v-navigation-drawer absolute permanent left>
         <v-container fill-height>
           <v-card-text>
@@ -28,6 +28,17 @@
           </v-card-text>
         </v-container>
       </v-navigation-drawer>
+
+      <!-- V-CONTENT BELOW  -->
+      
+      <v-container fill-height>
+        <v-card-text>
+          <center>
+            <strong> v-content </strong>
+          </center>
+        </v-card-text>
+      </v-container>
+
     </v-card>
 
     
