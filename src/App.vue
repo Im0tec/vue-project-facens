@@ -31,7 +31,7 @@
 
       <!-- V-CONTENT BELOW  -->
 
-      <v-container fill-height>
+      <v-container fill-height right: "1px">
         <v-card-text>
           <center>
             <strong> v-content </strong>
@@ -48,6 +48,13 @@
       </v-row>
     </v-footer>
     
+    <!-- V-BOTTOM-NAVIGATION BELOW  -->
+
+    <v-bottom-navigation horizontal align="center" justify="center">
+      <v-card-text>
+        <strong> v-bottom-navigation </strong>
+      </v-card-text>
+    </v-bottom-navigation>
   </v-app>
 
 </template>
