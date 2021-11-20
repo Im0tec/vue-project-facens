@@ -1,7 +1,10 @@
-# Presence activity 29/10  
+# Vue Project Of My Web Classes
 | Name | RA |
 |------|----|
 |Eduardo Campos Gonçalves|190309|
+
+## This is the final result of the project:
+![finalResult](https://user-images.githubusercontent.com/69486662/142732990-77da68f2-c36f-4f6d-8738-691fabd50ecc.png)
 
 ## Project setup
 ```
