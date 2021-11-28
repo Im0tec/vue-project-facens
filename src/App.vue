@@ -48,9 +48,9 @@
 
     <!-- V-FOOTER BELOW  -->
 
-    <v-footer height="30px" padless>
-      <v-row class="text-center" justify="center">
-        <strong> v-footer </strong>
+    <v-footer color="yellow darken-1" height="30px" padless>
+      <v-row class="text-center" justify="center" >
+        <strong> Mc Donalds ™ </strong>
       </v-row>
     </v-footer>
     
