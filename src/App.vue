@@ -11,7 +11,6 @@
 
     <!-- V-NAVIGATION-DRAWER, V-CONTENT BELOW AND AND V-APP-BAR BELOW  -->
 
-    <v-card height="90vh">
       <v-navigation-drawer absolute permanent left>
         <v-container></v-container>
         <v-container>
@@ -44,11 +43,9 @@
 
       <!-- V-CONTENT BELOW  -->
 
-      <v-container fill-height>
-      
-      </v-container>
-    </v-card>
-    
+      <v-main class="pa-0">
+      <router-view></router-view>
+    </v-main>
 
     <!-- V-FOOTER BELOW  -->
 
@@ -100,7 +97,6 @@ import Toolbar from "@/components/Toolbar.vue";
       },
     ],
     foodselected: 0,
-    selectedBottombarItem: 0,
     }),
   }
 </script>
