@@ -1,32 +1,38 @@
 <template>
   <v-app>
-    <!-- V-SYSTEM-BAR BELOW  -->
-
-    <v-system-bar app>
-      <v-row justify="center">
-        <strong> v-system-bar </strong>
-      </v-row>
-    </v-system-bar>
   
-    <!-- V-APP-BAR BELOW  -->
+   <Toolbar :items="food" />
 
-    <v-app-bar app>
-      <v-row justify="center">
-        <strong> v-app-bar </strong>
-      </v-row>
-    </v-app-bar>
+    <!-- V-SYSTEM-BAR BELOW -->
 
-    <!-- V-NAVIGATION-DRAWER AND V-CONTENT BELOW  -->
+    <!-- System Bar -->
+    <v-system-bar app color="yellow darken-1">
+      <v-card-text><center><strong>MC DONALDS, AMO MUITO TUDO ISSO!</strong></center></v-card-text>
+    </v-system-bar>
 
-    <v-card height="88vh">
+    <!-- V-NAVIGATION-DRAWER, V-CONTENT BELOW AND AND V-APP-BAR BELOW  -->
+
+    <v-card height="90vh">
       <v-navigation-drawer absolute permanent left>
-        <v-container fill-height>
-          <v-card-text>
-            <center>
-              <strong> v-navigation-drawer </strong>
-            </center>
-          </v-card-text>
+        <v-container>
         </v-container>
+         <v-divider></v-divider>
+
+      <v-list>
+        <v-list-item-group v-model="foodselected">
+          <v-list-item
+            v-for="item in food"
+            :key="item.title"
+            link
+            @click="$router.push(item.url)"
+          >
+
+            <v-list-item-content>
+              <v-list-item-title v-text="item.title"></v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+        </v-list-item-group>
+      </v-list>
       </v-navigation-drawer>
 
       <!-- V-CONTENT BELOW  -->
@@ -60,9 +66,37 @@
 </template>
 
 <script>
+import Toolbar from "@/components/Toolbar.vue";
   export default {
+    name: "App",
+    components:{
+      Toolbar,
+    },
     data: () => ({
-      links: [],
+     food: [
+      {
+        favorite: true,
+        title: "Home",
+        url: "/",
+      },
+      {
+        favorite: true,
+        title: "Lanches",
+        url: "/lanches",
+      },
+      {
+        favorite: false,
+        title: "Bebidas",
+        url: "/bebidas",
+      },
+      {
+        favorite: true,
+        title: "Mais Pedidos",
+        url: "/maispedidos",
+      },
+    ],
+    foodselected: 0,
+    selectedBottombarItem: 0,
     }),
   }
 </script>
