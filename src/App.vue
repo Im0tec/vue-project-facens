@@ -5,7 +5,6 @@
 
     <!-- V-SYSTEM-BAR BELOW -->
 
-    <!-- System Bar -->
     <v-system-bar app color="yellow darken-1">
       <v-card-text><center><strong>MC DONALDS, AMO MUITO TUDO ISSO!</strong></center></v-card-text>
     </v-system-bar>
@@ -14,9 +13,17 @@
 
     <v-card height="90vh">
       <v-navigation-drawer absolute permanent left>
+        <v-container></v-container>
         <v-container>
-        </v-container>
-         <v-divider></v-divider>
+          <v-list-item-content>
+            <v-list-item-title style="font-weight: 500; font-size: 150%">
+              <strong>Cleide</strong>
+            </v-list-item-title>
+            <v-list-item-subtitle>Carteira: R$132,45</v-list-item-subtitle>
+          </v-list-item-content>
+          </v-container>
+
+        <v-divider></v-divider>
 
       <v-list>
         <v-list-item-group v-model="foodselected">
@@ -45,12 +52,13 @@
         </v-card-text>
       </v-container>
     </v-card>
+    
 
     <!-- V-FOOTER BELOW  -->
 
     <v-footer color="yellow darken-1" height="30px" padless>
       <v-row class="text-center" justify="center" >
-        <strong> Mc Donalds ™ </strong>
+        <strong> Mc Donalds © </strong>
       </v-row>
     </v-footer>
     
@@ -58,7 +66,7 @@
 
     <v-bottom-navigation horizontal align="center" justify="center">
       <v-card-text>
-        <strong> v-bottom-navigation </strong>
+        <strong> Privacidade | Termos e Condições | Trabalhe Conosco   </strong>
       </v-card-text>
     </v-bottom-navigation>
   </v-app>
