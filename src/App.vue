@@ -17,7 +17,7 @@
         <v-container>
           <v-list-item-content>
             <v-list-item-title style="font-weight: 500; font-size: 150%">
-              <strong>Cleide</strong>
+              <strong>MARCOS</strong>
             </v-list-item-title>
             <v-list-item-subtitle>Carteira: R$132,45</v-list-item-subtitle>
           </v-list-item-content>
@@ -45,11 +45,7 @@
       <!-- V-CONTENT BELOW  -->
 
       <v-container fill-height>
-        <v-card-text>
-          <center>
-            <strong> v-content </strong>
-          </center>
-        </v-card-text>
+      
       </v-container>
     </v-card>
     
@@ -65,7 +61,7 @@
     <!-- V-BOTTOM-NAVIGATION BELOW  -->
 
     <v-bottom-navigation horizontal align="center" justify="center">
-      <v-card-text>
+      <v-card-text >
         <strong> Privacidade | Termos e Condições | Trabalhe Conosco   </strong>
       </v-card-text>
     </v-bottom-navigation>
