@@ -6,7 +6,7 @@
         <v-divider class="background-color: black mb-4"></v-divider>
 
         <v-row>
-          <v-col v-for="(food, l) in recents" :key="l" cols="3">
+          <v-col v-for="(food, l) in lanches" :key="l" cols="3">
             <Food :food="food" />
           </v-col>
         </v-row>
@@ -25,7 +25,7 @@ export default {
     foods() {
       return this.$store.state.foods;
     },
-    recents() {
+    lanches() {
       return this.foods.filter((food) => food.lanche);
     },
   },

@@ -1,6 +1,5 @@
 <template>
   <div>
-
     <!-- V-APP-BAR-BELOW  -->
 
     <v-app-bar dark app color="red darken-4" absolute clipped-left>

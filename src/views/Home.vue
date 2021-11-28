@@ -6,7 +6,7 @@
         <v-divider class="background-color: black mb-4"></v-divider>
 
         <v-row>
-          <v-col v-for="(food, p) in foods" :key="p" cols="3">
+          <v-col v-for="(food, f) in foods" :key="f" cols="3">
             <Food :food="food" />
           </v-col>
         </v-row>

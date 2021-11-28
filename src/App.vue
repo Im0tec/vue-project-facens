@@ -59,7 +59,7 @@
 
     <v-bottom-navigation horizontal align="center" justify="center">
       <v-card-text >
-        <strong> Privacidade | Termos e Condições | Trabalhe Conosco   </strong>
+        <strong>Privacidade | Termos e Condições | Trabalhe Conosco</strong>
       </v-card-text>
     </v-bottom-navigation>
   </v-app>
@@ -76,27 +76,22 @@ import Toolbar from "@/components/Toolbar.vue";
     data: () => ({
      food: [
       {
-        favorite: true,
         title: "Home",
         url: "/",
       },
       {
-        favorite: true,
         title: "Lanches",
         url: "/lanches",
       },
       {
-        favorite: false,
         title: "Bebidas",
         url: "/bebidas",
       },
       {
-        favorite: true,
         title: "Mais Pedidos",
         url: "/maispedidos",
       },
     ],
-    foodselected: 0,
     }),
   }
 </script>
