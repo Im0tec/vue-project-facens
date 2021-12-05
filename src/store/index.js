@@ -12,6 +12,8 @@ export default new Vuex.Store({
         lanche: true,
         bebida: false,
         maisPedido: true,
+        quantidade: (Math.random()*10).toFixed(),
+        vendidos: 0,
         description: "Não existe nada igual! Dois hambúrgueres, alface, queijo e molho especial, cebola e picles num pão com gergelim. O sabor de McDonald’s duplamente delicioso. Com dois hambúrgueres de carne 100% bovina, queijo cheddar derretido, cebola, picles e o incrível molho Big Mac."
       },
       {
@@ -20,6 +22,8 @@ export default new Vuex.Store({
         lanche: true,
         bebida: false,
         maisPedido: false,
+        quantidade: (Math.random()*10).toFixed(),
+        vendidos: 0,
         description: "Inigualável. Perfeito. Um hambúrguer feito com pura carne bovina, envolvida por duas fatias de queijo cheddar, cebola, picles e molhos ketchup e mostarda."
       },
       {
@@ -28,6 +32,8 @@ export default new Vuex.Store({
         lanche: true,
         bebida: false,
         maisPedido: true,
+        quantidade: (Math.random()*10).toFixed(),
+        vendidos: 0,
         description: "O maior sanduíche de carne 100% bovina do McDonald’s. 3 deliciosas fatias de queijo, tomate, alface crocante, cebola e o dobro de molho Tasty."
       },
       {
@@ -36,6 +42,8 @@ export default new Vuex.Store({
         lanche: true,
         bebida: false,
         maisPedido: true,
+        quantidade: (Math.random()*10).toFixed(),
+        vendidos: 0,
         description: "O sabor que você adora. Frango empanado e dourado com molho suave e cremoso, acompanhado de alface crocante num pão com gergelim."
       },
       {
@@ -44,6 +52,8 @@ export default new Vuex.Store({
         lanche: true,
         bebida: false,
         maisPedido: false,
+        quantidade: (Math.random()*10).toFixed(),
+        vendidos: 0,
         description: "Frango empanado e dourado com molho suave e cremoso, acompanhado de alface crocante, num pão com gergelim e uma deliciosa fatia de bacon."
       },
       {
@@ -52,6 +62,8 @@ export default new Vuex.Store({
         lanche: false,
         bebida: true,
         maisPedido: true,
+        quantidade: (Math.random()*10).toFixed(),
+        vendidos: 0,
         description: "Refrescante e geladinho. Uma bebida assim refresca a vida. Você pode escolher entre Coca-Cola, Coca-Cola Zero, Fanta Guaraná e Fanta Laranja."
       },
       {
@@ -60,6 +72,8 @@ export default new Vuex.Store({
         lanche: false,
         bebida: true,
         maisPedido: false,
+        quantidade: (Math.random()*10).toFixed(),
+        vendidos: 0,
         description: "Massa gelada de baunilha com uma supercamada de cobertura de chocolate e ainda por cima com farofa de paçoca. O canudo completa a tentação."
       },
       {
@@ -68,8 +82,30 @@ export default new Vuex.Store({
         lanche: false,
         bebida: true,
         maisPedido: true,
+        quantidade: (Math.random()*10).toFixed(),
+        vendidos: 0,
         description: "A sobremesa que o Brasil todo adora. Uma casquinha supercrocante, com massa gelada de mista que vai bem a qualquer hora."
       },
     ]
+  },
+  mutations: {
+
+  },
+  actions: {
+
+  },
+  getters: {
+    getMostBought(state){
+      var mostRequests ;
+      state.foods.forEach((food) => {
+        if (!food.maisPedido){
+          mostRequests = food
+        }
+        if(food.vendidos > mostRequests.vendidos){
+          mostRequests = food;
+        }
+      })      
+      return mostRequests;
+    }
   },
 })

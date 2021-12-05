@@ -8,6 +8,11 @@
         <v-row>
           <v-col v-for="(food, f) in foods" :key="f" cols="3">
             <Food :food="food" />
+            <v-card-actions>
+            <v-btn outlined rounded text v-if="food.quantidade <= 1"> Comprar  </v-btn>
+            <v-btn outlined rounded text v-else > Indisponivel</v-btn>
+            <v-btn outlined rounded text> Abrir </v-btn>
+          </v-card-actions>
           </v-col>
         </v-row>
       </v-col>
