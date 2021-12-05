@@ -4,11 +4,13 @@
 |Eduardo Campos Gonçalves|190309|
 
 ## This is the final result of the project:
-### Top of the project:
-![finalResultAF2](https://user-images.githubusercontent.com/69486662/143789802-ec7b3b20-3903-4c07-b6fd-3e0000c61661.png)  
+### Final result of the project consuming a burguer api:
+![Sem título](https://user-images.githubusercontent.com/69486662/144767853-2b4d1881-d46c-4bc7-a0d3-977cca1eba6c.png)
 
-## Bottom of the project:
-![bottomOfProject](https://user-images.githubusercontent.com/69486662/143789869-cd070df1-86b8-4040-90e6-a0da288102c9.png)
+----
+![Sem título](https://user-images.githubusercontent.com/69486662/144767883-d8243aaf-eeaf-431a-94a1-d37b85c40eb1.png)  
+----
+
 
 
 ## Project setup
