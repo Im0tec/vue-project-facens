@@ -28,6 +28,9 @@ export default {
     maisPedidos() {
       return this.foods.filter((food) => food.maisPedido);
     },
+    created() {
+    this.$store.dispatch("getPosts");
+  }
   },
 };
 </script>

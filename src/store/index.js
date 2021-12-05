@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import axios from 'axios'
 
 Vue.use(Vuex)
 
@@ -94,17 +95,28 @@ export default new Vuex.Store({
         vendidos: 0,
         description: "A sobremesa que o Brasil todo adora. Uma casquinha supercrocante, com massa gelada de mista que vai bem a qualquer hora."
       },
-    ]
+    ],
+    newBurguers: [],
   },
   mutations: {
     reduzirQuantidade(state, id){
       state.foods[id-1].quantidade--;
       state.foods[id-1].vendidos++;
       return state.foods[id-1];
+    },
+    setNewBurguers(state, burguers) {
+      state.newBurguers = burguers;
     }
   },
   actions: {
-
+    getPosts({ commit }) {
+      axios.get('https://my-burger-api.herokuapp.com/burgers')
+          .then(response => {
+              commit('setNewBurguers', response.data);
+          }).catch(err => {
+            console.log(err);
+          })
+  }
   },
   getters: {
     getMostBought(state){
@@ -116,8 +128,8 @@ export default new Vuex.Store({
         if(food.vendidos > mostRequests.vendidos){
           mostRequests = food;
         }
-      })      
+      })
       return mostRequests;
-    }
+    },
   },
 })
