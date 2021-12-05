@@ -9,9 +9,8 @@
           <v-col v-for="(food, l) in lanches" :key="l" cols="3">
             <Food :food="food" />
           <v-card-actions>
-            <v-btn outlined rounded text v-if="food.quantidade <= 1"> Comprar  </v-btn>
+            <v-btn outlined rounded text v-if="food.quantidade >= 1" @click="comprar(food.id)"> Comprar </v-btn>
             <v-btn outlined rounded text v-else > Indisponivel</v-btn>
-            <v-btn outlined rounded text> Abrir </v-btn>
           </v-card-actions>
           </v-col>
         </v-row>
@@ -32,6 +31,11 @@ export default {
     },
     lanches() {
       return this.foods.filter((food) => food.lanche);
+    },
+  },
+  methods: {
+    comprar (id) {
+      this.$store.commit('reduzirQuantidade', id)
     },
   },
 };

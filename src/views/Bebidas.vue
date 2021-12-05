@@ -11,7 +11,6 @@
             <v-card-actions>
             <v-btn outlined rounded text v-if="food.quantidade <= 1"> Comprar  </v-btn>
             <v-btn outlined rounded text v-else > Indisponivel</v-btn>
-            <v-btn outlined rounded text> Abrir </v-btn>
           </v-card-actions>
           </v-col>
         </v-row>
